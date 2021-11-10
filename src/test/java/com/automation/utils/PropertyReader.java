@@ -7,11 +7,13 @@ public class PropertyReader {
 
 	static Properties prop = new Properties();
 
+	// it'll load all key-value pair from data.properties to prop object. 
+	// We need to call this method only once in the project
 	public static void initProperties() {
 		try {
 			prop.load(new FileInputStream("src//test//resources//data//data.properties"));
 		} catch (Exception e) {
-			
+
 		}
 	}
 

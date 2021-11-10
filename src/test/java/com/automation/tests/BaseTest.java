@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.automation.utils.ExcelUtils;
 import com.automation.utils.PropertyReader;
 
 public class BaseTest {
@@ -25,6 +26,8 @@ public class BaseTest {
 		driver.manage().window().maximize();
 
 		PropertyReader.initProperties();
+		
+		ExcelUtils.initExcelData();
 
 		// Loading url in the browser
 		driver.get(PropertyReader.getProperty("application.url"));
