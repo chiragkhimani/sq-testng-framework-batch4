@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.automation.utils.PropertyReader;
+
 public class LoginPage extends BasePage {
 
 	@FindBy(id = "user-name")
@@ -33,6 +35,11 @@ public class LoginPage extends BasePage {
 
 	public void verifyInvalidLoginError() {
 		System.out.println(invalidLoginError.isDisplayed());
+	}
+
+	public void openWebsite() {
+		// Loading url in the browser
+		driver.get(PropertyReader.getProperty("application.url"));
 	}
 
 }

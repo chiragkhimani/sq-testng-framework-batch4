@@ -11,7 +11,7 @@ import com.automation.utils.ExcelUtils;
 import com.automation.utils.PropertyReader;
 
 public class BaseTest {
-
+	
 	WebDriver driver;
 
 	@BeforeMethod
@@ -26,11 +26,9 @@ public class BaseTest {
 		driver.manage().window().maximize();
 
 		PropertyReader.initProperties();
-		
+
 		ExcelUtils.initExcelData();
 
-		// Loading url in the browser
-		driver.get(PropertyReader.getProperty("application.url"));
 	}
 
 	@AfterMethod
